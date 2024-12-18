@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Games Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.55.2/phaser.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        footer {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Web Games Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#arcade">Arcade Games</a></li>
+                <li><a href="#puzzle">Puzzle Games</a></li>
+                <li><a href="#rpg">RPG Games</a></li>
+                <li><a href="#strategy">Strategy Games</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="arcade">
+            <h2>Arcade Games</h2>
+            <!-- Arcade Game Placeholder -->
+            <div id="arcade-game"></div>
+        </section>
+        
+        <section id="puzzle">
+            <h2>Puzzle Games</h2>
+            <!-- Puzzle Game Placeholder -->
+            <div id="puzzle-game"></div>
+        </section>
+        
+        <section id="rpg">
+            <h2>RPG Games</h2>
+            <!-- RPG Game Placeholder -->
+            <div id="rpg-game"></div>
+        </section>
+        
+        <section id="strategy">
+            <h2>Strategy Games</h2>
+            <!-- Strategy Game Placeholder -->
+            <div id="strategy-game"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2024 Web Games Hub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Example Phaser.js setup for Arcade Game
+        var config = {
+            type: Phaser.AUTO,
+            width: 800,
+            height: 600,
+            scene: {
+                preload: preload,
+                create: create,
+                update: update
+            }
+        };
+
+        var game = new Phaser.Game(config);
+
+        function preload() {
+            this.load.image('arcadeGame', 'path_to_arcade_game_assets.png'); // Replace with actual asset path
+        }
+
+        function create() {
+            this.add.text(400, 300, 'Arcade Game Placeholder', { fontSize: '32px', fill: '#fff' }).setOrigin(0.5);
+        }
+
+        function update() {
+            // Arcade Game Logic
+        }
+    </script>
+</body>
+</html>
